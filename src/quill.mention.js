@@ -121,7 +121,8 @@ class Mention {
   getItemData() {
     return {
       id: this.mentionList.childNodes[this.itemIndex].dataset.id,
-      value: this.mentionList.childNodes[this.itemIndex].dataset.value,
+      //value: this.mentionList.childNodes[this.itemIndex].dataset.value,
+      value: '<a href="http://domain/persons/'+this.mentionList.childNodes[this.itemIndex].dataset.id+'">' +  this.mentionList.childNodes[this.itemIndex].dataset.value + '</a>',
       denotationChar: this.mentionList.childNodes[this.itemIndex].dataset.denotationChar,
     };
   }
